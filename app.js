@@ -362,11 +362,262 @@
 // }
 // console.log(c)
 
-let a = "karachi"
-let b = prompt("Enter Your City")
-b = b.toLowerCase()
+// let a = "karachi"
+// let b = prompt("Enter Your City")
+// b = b.toLowerCase()
 
-if(a == b){
-    console.log("City Matched")
+// if(a == b){
+//     console.log("City Matched")
+// }
+
+// let a = 'AHMED'
+
+// let firstLetter = a.slice(0,1)
+// firstLetter = firstLetter.toUpperCase()
+
+// let secondLetter = a.slice(1)
+// secondLetter = secondLetter.toLowerCase()
+
+// let b = firstLetter + secondLetter
+// console.log(b)
+
+// let a = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam consectetur cumque? Quia laboriosam Iran numquam, dicta Iran architecto iste, Iran nam autem libero fugiat eaque placeat pariatur dolorem quod illo fugit aperiam?"
+
+// for (let i = 0; i < a.length; i++) {
+//     let b = a.slice(i, i + 4)
+//     console.log(b)
+//     if (b === "Iran") {
+//         console.log("======== Word Found ===============")
+//         let starting = a.slice(0, i)
+//         let ending = a.slice(i + 4)
+//         a = starting + "Pakistan" + ending
+//     }
+// }
+
+// console.log(a)
+
+// let check = a.indexOf("Iran")
+// let starting = a.slice(0,check)
+// console.log(starting)
+
+// let ending = a.slice(check+4)
+// console.log(ending)
+
+// let final = starting + "Pakistan" + ending
+// console.log(final)
+
+// let codes = '[#42$56][1#2&13][85#$58][@53$23][%1225#]'
+
+// for (let i = 0; i < codes.length; i++) {
+//     let key = codes.slice(i, i + 8)
+//     if (key.charAt(0) === "[" && key.charAt(7) === "]") {
+//         console.log(key)
+//     }
+// }
+
+// let a = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam consectetur cumque? Quia laboriosam Iran numquam, dicta Iran architecto iste, Iran nam autem libero fugiat eaque placeat pariatur dolorem quod illo fugit aperiam?"
+
+// a = a.replace("Iran","Pakistan")
+// a = a.replace(/Iran/g,"Pakistan")
+
+// console.log(a)
+
+// mem
+// maam
+// madam
+// saas
+
+// let b = 'madam'
+
+// let c = b.split("")
+// console.log(c)
+// c = c.reverse()
+// console.log(c)
+// c = c.join("")
+// console.log(c)
+
+// if (c === b) {
+//     console.log("palindrome")
+// }else{
+//     console.log("not palindrome")
+// }
+
+// let a = 0.5
+
+// a = Math.round(a)
+// console.log(a)
+
+// let a = 0.3
+
+// a = Math.ceil(a)
+
+// console.log(a)
+
+// let a = 12.9
+
+// a = Math.floor(a)
+
+// console.log(a)
+
+
+
+// let a = 33.7
+
+// let b = (a * 375 / 29) * 1000
+// b = Math.round(b)
+
+// console.log(b)
+
+// let a = "13246541.39999"
+
+// a = +a
+// a = Number(a)
+// a = parseInt(a)
+// a = parseFloat(a)
+
+// a = a.toFixed(3)
+
+// console.log(typeof a)
+
+
+
+// let b = 10
+// let c
+
+
+// console.log(b * c)
+
+
+// let c = 313246156
+// c = c.toString()
+
+// console.log(typeof c,c)
+
+
+// let a = Math.random() * 6
+// a = Math.ceil(a)
+// console.log(a)
+
+// let dateTime = new Date()
+// console.log(dateTime)
+// console.log(typeof dateTime)
+
+// let currentDate = dateTime.getDate()
+// console.log(currentDate)
+// let currentMonth = dateTime.getMonth()
+// console.log(currentMonth)
+// let currentYear = dateTime.getFullYear()
+// console.log(currentYear)
+// console.log(dateTime.getHours())
+// console.log(dateTime.getMinutes())
+// console.log(dateTime.getSeconds())
+// console.log(dateTime.getMilliseconds())
+// console.log(dateTime.getTime())
+
+
+// let now = new Date()
+// let dateOfBirth = new Date("6-20-2000")
+// console.log(dateOfBirth)
+
+// console.log(dateOfBirth.getDate())
+// console.log(dateOfBirth.getMonth())
+// console.log(dateOfBirth.getFullYear())
+// console.log(dateOfBirth.getHours())
+// console.log(dateOfBirth.getMinutes())
+// console.log(dateOfBirth.getSeconds())
+// console.log(dateOfBirth.getMilliseconds())
+// console.log(dateOfBirth.getTime(),"<========= date Of Birth")
+// console.log(now.getTime(),"<========= Current Date Time")
+
+// let running = now.getTime()
+// let dateOfBirthTime = dateOfBirth.getTime()
+
+// let diff = running - dateOfBirthTime
+// console.log(diff / (1000 * 60 * 60 * 24 * 365))
+
+// let d = new Date()
+// console.log(d)
+
+// d.setDate(1)
+// d.setMonth(4)
+// d.setHours(13)
+// d.setMinutes(0)
+// d.setSeconds(0)
+
+// console.log(d)
+
+
+
+// let now = new Date("03-02-2025")
+
+// let beforeDate = new Date("03-02-2025").setDate(now.getDate() - 5)
+// beforeDate = new Date(beforeDate)
+
+// console.log(now)
+// console.log(beforeDate)
+
+// let months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"]
+
+// function timeBatao(){
+
+//     let dt = new Date()
+//     let hours = dt.getHours()
+//     let mins = dt.getMinutes()
+//     let sec = dt.getSeconds()
+//     let today = dt.getDate()
+//     let currentMonth = months[dt.getMonth()]
+//     let year = dt.getFullYear()
+
+//     console.log(`${hours}:${mins}:${sec}, ${today}-${currentMonth}-${year}`)
+// }
+// timeBatao()
+
+// console.log(months)
+
+
+
+
+// function abc(){
+//     let a = 10
+// }
+// abc()
+// a = 20
+
+// console.log(a)
+
+
+// function abc(msg){
+//     console.log(msg)
+// }
+
+// abc("Hello JavaScript")
+// abc("Hello Muhammad ALi")
+// abc("Hello Muhammad Ahmed")
+// let a = "asdasdas"
+// abc(a)
+
+
+// function getDiscount(price){
+//     let a = price - 20
+//     console.log(a)
+// }
+
+// getDiscount(100)
+// getDiscount(200)
+// getDiscount(250)
+// getDiscount(450)
+
+
+function checkEven(num) {
+    let a = num % 2
+    console.log(a)
+    if(a){
+        console.log("Odd")
+    }else{
+        console.log("Even")
+    }
 }
 
+checkEven(10)
+checkEven(11)
+checkEven(13)
