@@ -608,16 +608,223 @@
 // getDiscount(450)
 
 
-function checkEven(num) {
-    let a = num % 2
-    console.log(a)
-    if(a){
-        console.log("Odd")
+// function checkEven(num) {
+//     let a = num % 2
+//     console.log(a)
+//     if(a){
+//         console.log("Odd")
+//     }else{
+//         console.log("Even")
+//     }
+// }
+
+// checkEven(10)
+// checkEven(11)
+// checkEven(13)
+
+
+// function getValue(){
+//     return 2    
+// }
+
+// let a = getValue()
+// console.log(a)
+
+// function add(a,b){
+//     return a + b
+// }
+// let a = add(20,30)
+// let b = add(3752,1564)
+
+// console.log(a,b)
+
+// create funtion to:
+// 1. convert gm to kg
+
+// function convertToKg(gm){
+//     return gm/1000
+// }
+// console.log(convertToKg(500))
+// console.log(convertToKg(700))
+// console.log(convertToKg(1500))
+
+// 2. square a number
+
+// function square(num){
+//     return num * num
+// }
+// console.log(square(2))
+// console.log(square(6))
+// console.log(square(9))
+// console.log(square(13))
+
+// 3. count the number of characters in a string
+
+// function countCharacter(str){
+//     return str.length
+// }
+
+// 4. reverse a string 
+// function revString(str){
+//     let a = str.split("")
+//     let b = a.reverse()
+//     let c = b.join("")
+
+//     return c
+// }
+
+// 5. check if a string is palindrome
+// function checkPalindrom(str){
+//     let a = str
+//     let b = revString(str)
+//     return a === b
+// }
+
+// 6. capitalize the fisrt letter
+// function caps(str){
+//     let a = str.slice(0,1).toUpperCase()
+//     let b = str.slice(1).toLowerCase()
+
+//     return a+b
+// }
+
+
+// function ac(){
+//     return "ABC"
+// }
+// let a = ac()
+
+
+
+let st = 6
+
+// 1 = "Approved"
+// 2 = "UnApproved"
+// 3 = "Pending"
+// 4 = "Under Process"
+// 5 = "Rejected"
+
+// switch (st) {
+//     case 1:
+//         console.log("User is Approved");
+//         break
+//     case 2:
+//         console.log("User is UnApproved");
+//         break
+//     case 3:
+//     case 4:
+//         console.log("User Request is Pending");
+//         break
+//     case 5:
+//         console.log("User Request is Rejected")
+//         break
+//     default:
+//         console.log("Status Is incorrect")
+// }
+
+/*let i = 0;
+while (i < 10){
+    console.log("While" + i)
+    i++
+}*/
+
+// let i = 0; //rfth jh jkh
+// do{
+//     console.log(`Index ${i}`)
+//     i++
+// }while(i < 0)
+
+// let a = ""
+
+// function btnClick(message){
+//     a += message
+//     console.log(a)
+// }
+// function calculate(){
+//     let answer = eval(a)
+//     console.log(answer)
+// }
+
+
+// function EventFire(img){
+//     console.log(img) // image
+//     img.src = "https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg"
+// }
+
+// function mouseOut(img){
+//     console.log(img)
+
+//     img.src = "https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg"
+// }
+
+
+// function eventFire(msg){
+//     console.log(msg)
+// }
+
+
+
+// function addBorder(elem){
+//     elem.style.color = "darkcyan"
+//     elem.style.backgroundColor = "white"
+//     elem.style.border = "2px solid darkcyan"
+//     elem.style.display = "none"
+// }
+
+// function hidePera(){
+//     let p = document.getElementById("p")
+//     p.style.display = "none"
+// }
+
+// let box = document.getElementById("box")
+
+// function square() {
+//     box.className = "square"
+// }
+// function rectangle() {
+//     box.className = "rectangle"
+// }
+// function circle() {
+//     box.className = "circle"
+// }
+
+let images = [
+    "https://letsall.myshopify.com/cdn/shop/files/slider03.jpg?v=1646903515",
+    "https://letsall.myshopify.com/cdn/shop/files/slider02_385f0848-b7c1-46a7-a32d-af9e53284f2c.jpg?v=1646904275",
+    "https://letsall.myshopify.com/cdn/shop/files/slider01.jpg?v=1646903491"
+]
+
+let sliderImage = document.getElementById("sliderImage")
+let imageIndex = 0
+
+function renderImage(){
+    sliderImage.src = images[imageIndex]
+}
+renderImage()
+
+
+
+function nextImage(){
+    if(imageIndex + 1 === images.length){
+        imageIndex = 0
     }else{
-        console.log("Even")
+        imageIndex = imageIndex + 1
     }
+    renderImage()
 }
 
-checkEven(10)
-checkEven(11)
-checkEven(13)
+function previousImage(){    
+    if(imageIndex === 0){
+        imageIndex = images.length - 1
+    }else{
+        imageIndex = imageIndex - 1
+    }
+    renderImage()
+}
+
+
+
+
+setInterval(function(){
+    nextImage()
+},3000)
