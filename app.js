@@ -788,43 +788,677 @@ while (i < 10){
 //     box.className = "circle"
 // }
 
-let images = [
-    "https://letsall.myshopify.com/cdn/shop/files/slider03.jpg?v=1646903515",
-    "https://letsall.myshopify.com/cdn/shop/files/slider02_385f0848-b7c1-46a7-a32d-af9e53284f2c.jpg?v=1646904275",
-    "https://letsall.myshopify.com/cdn/shop/files/slider01.jpg?v=1646903491"
-]
+// let images = [
+//     "https://letsall.myshopify.com/cdn/shop/files/slider03.jpg?v=1646903515",
+//     "https://letsall.myshopify.com/cdn/shop/files/slider02_385f0848-b7c1-46a7-a32d-af9e53284f2c.jpg?v=1646904275",
+//     "https://letsall.myshopify.com/cdn/shop/files/slider01.jpg?v=1646903491"
+// ]
 
-let sliderImage = document.getElementById("sliderImage")
-let imageIndex = 0
+// let sliderImage = document.getElementById("sliderImage")
+// let imageIndex = 0
 
-function renderImage(){
-    sliderImage.src = images[imageIndex]
-}
-renderImage()
-
-
-
-function nextImage(){
-    if(imageIndex + 1 === images.length){
-        imageIndex = 0
-    }else{
-        imageIndex = imageIndex + 1
-    }
-    renderImage()
-}
-
-function previousImage(){    
-    if(imageIndex === 0){
-        imageIndex = images.length - 1
-    }else{
-        imageIndex = imageIndex - 1
-    }
-    renderImage()
-}
+// function renderImage(){
+//     sliderImage.src = images[imageIndex]
+// }
+// renderImage()
 
 
 
+// function nextImage(){
+//     if(imageIndex + 1 === images.length){
+//         imageIndex = 0
+//     }else{
+//         imageIndex = imageIndex + 1
+//     }
+//     renderImage()
+// }
 
-setInterval(function(){
-    nextImage()
-},3000)
+// function previousImage(){    
+//     if(imageIndex === 0){
+//         imageIndex = images.length - 1
+//     }else{
+//         imageIndex = imageIndex - 1
+//     }
+//     renderImage()
+// }
+
+// setInterval(function(){
+//     nextImage()
+// },3000)
+
+// ======== switch statement ===========
+
+// let day = document.getElementById("day")
+
+// function submitText() {
+//     console.log(day.value)
+
+//     switch (day.value) {
+//         case "mon":
+//             console.log("Phr se Office Jao")
+//             break
+//         case "tue":
+//             console.log("Tue ko bhi jao")
+//             break
+//         default:
+//             console.log("ye Din hafte main nai aata")
+//     }
+// }
+
+
+// function clickBtn(elem){
+//     elem.style.display = "none"
+// }
+
+// let msg = document.getElementById("msg")
+
+// function checkInput(inp){
+//     if(inp.value.length != 11){
+//         msg.innerHTML = "Input is not correct, Please Enter 11 character value"
+//     }else{
+//         msg.innerHTML = ""
+//     }
+// }
+
+// function makeCircle(elem){
+//     elem.className = "circle"
+// }
+
+
+// let a = document.getElementById
+// let box = document.getElementById("box")
+// let a = box.getElementsByTagName("p")
+// console.log(a)
+
+// for(let i = 0;i < a.length; i++){
+//     a[i].style.color = "red"
+// } 
+
+
+// function abc(){
+//     console.log("ASD")
+// }
+
+// let asd = ()=>{
+//     console.log("ASD")
+// }
+
+// abc()
+// asd()
+
+// let abc = ()=>{
+//     return "abc"
+// }
+// let abc = ()=>"abc"
+
+// let square = (num)=> num*num
+// let square = num => num*num
+
+// console.log(square(5))
+
+
+// let box = document.getElementById("box")
+// console.log(box.firstChild)
+// console.log(box.lastChild)
+
+
+// let pera = document.getElementById("pera")
+// console.log(pera.parentNode)
+// console.log(pera.previousSibling)
+// console.log(pera.nextSibling)
+
+
+// let newElement = document.createElement("P")
+// newElement.innerHTML = "ahsd kjahskdj ahkjs dha"
+// box.appendChild(newElement)
+
+// console.log(newElement)
+
+// let inp = document.getElementById("inp")
+// let box = document.getElementById("box")
+
+// let delTodo = (btn) => {
+//     btn.parentNode.remove()
+// }
+
+// let editTodo = (btn)=>{
+//     let p = btn.parentNode
+//     p.firstChild.nodeValue = prompt("Enter Value")
+//     console.log(p.childNodes)
+// }
+
+// let addTodo = () => {
+//     let a = inp.value
+
+//     // creating p Element
+//     let p = document.createElement("p")
+//     p.innerHTML = a
+
+
+//     // creating Delete Button
+//     let delButton = document.createElement("button")
+//     delButton.innerHTML = "Delete"
+//     delButton.setAttribute('onclick', 'delTodo(this)')
+
+//     // create edit button
+//     let editBtn = document.createElement("button")
+//     editBtn.innerHTML = "Edit"
+//     editBtn.setAttribute('onclick','editTodo(this)')
+
+
+//     p.appendChild(delButton)
+//     p.appendChild(editBtn)
+
+//     box.appendChild(p)
+
+//     inp.value = ""
+// }
+
+// let deleteAll = ()=>{
+//     box.innerHTML = ""
+// }
+
+// let a = {
+//     firstName: "Muhammad",
+//     lastName: "Ahmed",
+//     contact:"030721326547",
+//     cnic:"1657456174",
+//     age:15
+// }
+
+// a.contact = "1231"
+// delete a.cnic
+
+// let checkProperty = "contact" in a
+// console.log(checkProperty)
+
+// console.log(a)
+
+// let a = [
+//     {
+//         firstName: "Muhammad",
+//         lastName: "Ahmed",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 15
+//     },
+//     {
+//         firstName: "Muhammad",
+//         lastName: "Abu Bakar",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 15
+//     },
+//     {
+//         firstName: "Muhammad",
+//         lastName: "Umar",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 15
+//     },
+//     {
+//         firstName: "Muhammad",
+//         lastName: "Usman",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 17
+//     },
+//     {
+//         firstName: "Muhammad",
+//         lastName: "Ali",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 12
+//     },
+//     {
+//         firstName: "Muhammad",
+//         lastName: "hasan",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 20
+//     },
+//     {
+//         firstName: "Muhammad",
+//         lastName: "hussain",
+//         contact: "030721326547",
+//         cnic: "1657456174",
+//         age: 19
+//     },
+// ]
+
+// let arr = []
+
+// for (let i = 0; i < a.length; i++) {
+//     let x = a[i]
+//     if(x.age >= 17){
+//         arr.push(x)
+//     }
+// }
+// console.log(arr)
+
+// let a = (name,contact,cnic)=>{
+
+// }
+
+// function Student(name,contact,cnic){
+//     this.studentName = name
+//     this.contact = contact
+//     this.cnic = cnic
+// }
+
+// let student1 = new Student("ashd","asd","3214654")
+// console.log(student1)
+
+// let a = {
+//     name:'ASFDAS',
+//     contact:'321544165',
+//     age:15,
+//     cnic:"1234561234"
+// }
+
+// let keys = Object.keys(a)
+// console.log(keys)
+
+// let vals = Object.values(a)
+// console.log(vals)
+
+// let props = Object.entries(a)
+// console.log(props)
+
+
+// Object.freeze(a)
+// a.age = 10
+// console.log(a)
+
+// let questions = [
+//     {
+//         question: "What is the capital of France?",
+//         options: ["Paris", "London", "Berlin", "Madrid"],
+//         correctAnswer: "Paris",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which data type is used to store text in Python?",
+//         options: ["int", "str", "list", "float"],
+//         correctAnswer: "str",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which of the following is a JavaScript framework?",
+//         options: ["Django", "React", "Laravel", "Flask"],
+//         correctAnswer: "React",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "What does HTML stand for?",
+//         options: ["Hyper Trainer Markup Language", "Hyper Text Markup Language", "High Text Machine Language", "Hyper Text Managing Links"],
+//         correctAnswer: "Hyper Text Markup Language",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which company developed the programming language Python?",
+//         options: ["Google", "Microsoft", "CWI", "Apple"],
+//         correctAnswer: "CWI",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which keyword is used to define a function in Python?",
+//         options: ["function", "define", "def", "fun"],
+//         correctAnswer: "def",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which symbol is used for comments in JavaScript?",
+//         options: ["//", "#", "/* */", "<!-- -->"],
+//         correctAnswer: "//",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which one is not a Python data structure?",
+//         options: ["List", "Tuple", "Dictionary", "Class"],
+//         correctAnswer: "Class",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which operator is used for exponentiation in Python?",
+//         options: ["^", "**", "exp()", "pow()"],
+//         correctAnswer: "**",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "What does CSS stand for?",
+//         options: ["Colorful Style Sheets", "Creative Style System", "Cascading Style Sheets", "Computer Style Syntax"],
+//         correctAnswer: "Cascading Style Sheets",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which method is used to add an element at the end of a Python list?",
+//         options: ["append()", "add()", "insert()", "push()"],
+//         correctAnswer: "append()",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which SQL command is used to retrieve data from a database?",
+//         options: ["GET", "EXTRACT", "SELECT", "FETCH"],
+//         correctAnswer: "SELECT",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which of the following is not an OOP concept?",
+//         options: ["Encapsulation", "Inheritance", "Polymorphism", "Compilation"],
+//         correctAnswer: "Compilation",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which function is used to display output in JavaScript?",
+//         options: ["console.log()", "print()", "echo()", "printf()"],
+//         correctAnswer: "console.log()",
+//         time: 60,
+//         marks: 2
+//     },
+//     {
+//         question: "Which Python library is mainly used for data analysis?",
+//         options: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
+//         correctAnswer: "Pandas",
+//         time: 60,
+//         marks: 2
+//     }
+// ];
+
+
+// let questionIndex = 0
+// let totalMarks = 0
+// let displayQuestion = document.getElementById("displayQuestion")
+// let displayOptions = document.getElementById("displayOptions")
+// let currentQuestionNo = document.getElementById("currentQuestionNo")
+// let totalQuestionNumber = document.getElementById("totalQuestionNumber")
+// let timerDisplay = document.getElementById("timerDisplay")
+// let timer = questions[0].time
+
+// let checkAnswer = (a,b,c)=>{
+//     if(a === b){
+//         totalMarks += c
+//     }
+//     console.log(totalMarks)
+//     nextQuestion()
+// }
+
+// let renderQuestion = ()=>{
+//     let currentQuestion = questions[questionIndex]
+
+//     currentQuestionNo.innerHTML = questionIndex + 1
+//     totalQuestionNumber.innerHTML = questions.length
+//     displayQuestion.innerHTML = currentQuestion.question
+
+//     displayOptions.innerHTML = ""
+//     for(let i =0; i< currentQuestion.options.length; i++){        
+//         let option = currentQuestion.options[i]
+//         displayOptions.innerHTML += `<button onclick="checkAnswer('${currentQuestion.correctAnswer}','${option}',${currentQuestion.marks})">${option}</button>`
+//     }
+// }
+// renderQuestion()
+
+// let nextQuestion = ()=>{
+//     if(questionIndex + 1 === questions.length){
+//         alert("Quiz Completed and your marks are"+totalMarks)
+//     }else{
+//         questionIndex++
+//         renderQuestion()
+//         timer = questions[questionIndex].time
+//         timerDisplay.innerHTML = timer
+//     }
+// }
+// let prevQuestion = ()=>{
+//     questionIndex--
+//     renderQuestion()
+// }
+// const checkTimer = ()=>{
+//     const currentQuestion = questions[questionIndex]
+//     if(timer === 0){
+//         nextQuestion()        
+//         timer = currentQuestion.time        
+//     }else{
+//         timer--
+//     }
+//     timerDisplay.innerHTML = timer
+// }
+
+// setInterval(checkTimer,1000)
+
+
+// let minutes = 0
+// let seconds = 0
+// let miliseconds = 0
+
+// let min = document.getElementById("min")
+// let sec = document.getElementById("sec")
+// let mili = document.getElementById("mili")
+
+// let renderTimer     = ()=>{
+//     min.innerHTML = minutes
+//     sec.innerHTML = seconds
+//     mili.innerHTML = miliseconds
+// }
+
+// renderTimer()
+
+
+// let timer = ()=>{
+//     miliseconds++
+//     if(miliseconds === 100){
+//         miliseconds = 0
+//         seconds++
+//         if(seconds === 60){
+//             seconds = 0
+//             minutes++
+//         }
+//     }
+
+//     renderTimer()
+// }
+
+
+// let interval;
+// let start = ()=>{
+//     interval = setInterval(()=>{
+//         timer()
+//     },10)
+// }
+// let pause = ()=>{
+//     clearInterval(interval)
+// }
+// let reset = ()=>{
+//     minutes = 0
+//     seconds = 0
+//     miliseconds = 0
+
+//     renderTimer()
+//     pause()
+// }
+
+// let a = ()=>{
+//     let popup = window.open("https://www.bazarexa.com","win1","width=500px,height=500px,top=200px,left=200px")
+
+//     if(!popup){
+//         alert("Please unblock your popup blocker")
+//     }else{
+//         console.log(popup)
+//     }
+// }
+
+// let storeDT = ()=>{
+//     let obj = {
+//         appName:"ABC",
+//         appNo:123465,
+//         appActive:true
+//     }
+//     // localStorage.setItem("appName","als dal jsdlaj s")
+//     // localStorage.setItem("appNo",132461)
+//     // localStorage.setItem("appActive",true)
+//     let jsonForm = JSON.stringify(obj)
+//     localStorage.setItem("appData",jsonForm)
+// }
+
+// let getDT = ()=>{
+//     let dt = localStorage.getItem("appData")
+//     console.log(JSON.parse(dt))
+// }
+
+// let removeDT = ()=>{
+//     localStorage.removeItem("appName")
+// }
+// let removeAll = ()=>{
+//     localStorage.clear()
+// }
+
+// let a = ()=> {
+//     try{st
+//         let a = 10
+//         let b = 30
+//         if(a == b){
+//             console.log("Equal")
+//         }else{
+//             throw "Data is Not Equal"
+//         }
+//     }catch(error){
+//         alert(error)
+//     }
+// }
+
+// let obj = {
+//     id:1,
+//     firstName:"Muhammad",
+//     lastName:"Ahmed",
+//     age:63,    
+// }
+
+
+// for(let a in obj){
+//     console.log(obj[a])
+// }
+
+let a = [
+    { id: 1, firstName: "Muhammad", lastName: "Ahmed", age: 63 },
+    { id: 2, firstName: "Ali", lastName: "Khan", age: 28 },
+    { id: 3, firstName: "Ayesha", lastName: "Malik", age: 34 },
+    { id: 4, firstName: "Hassan", lastName: "Raza", age: 41 },
+    { id: 5, firstName: "Fatima", lastName: "Sheikh", age: 22 },
+    { id: 6, firstName: "Usman", lastName: "Javed", age: 37 },
+    { id: 7, firstName: "Sara", lastName: "Nawaz", age: 30 },
+    { id: 8, firstName: "Bilal", lastName: "Chaudhry", age: 45 },
+    { id: 9, firstName: "Zainab", lastName: "Iqbal", age: 27 },
+    { id: 10, firstName: "Imran", lastName: "Shah", age: 52 },
+    { id: 11, firstName: "Noor", lastName: "Fatima", age: 19 },
+    { id: 12, firstName: "Hamza", lastName: "Butt", age: 36 },
+    { id: 13, firstName: "Sana", lastName: "Khalid", age: 24 },
+    { id: 14, firstName: "Danish", lastName: "Tariq", age: 39 },
+    { id: 15, firstName: "Hina", lastName: "Qureshi", age: 29 },
+    { id: 16, firstName: "Kashif", lastName: "Saleem", age: 47 },
+    { id: 17, firstName: "Mariam", lastName: "Hassan", age: 32 },
+    { id: 18, firstName: "Shahzaib", lastName: "Farooq", age: 26 },
+    { id: 19, firstName: "Rabia", lastName: "Ansari", age: 38 },
+    { id: 20, firstName: "Tahir", lastName: "Latif", age: 55 }
+];
+
+// a.forEach((x)=>{
+//     console.log(x)
+//     x.section = "A"
+// })
+
+// let ids = a.map((x)=>{
+//     if(x.age > 30){
+//         return x.id
+//     }
+// })
+// console.log(ids)
+
+// let dt = a.filter((x) => {
+//     if (x.age > 30) {
+//         return x.id
+//     }
+// })
+// console.log(dt)
+
+// let dt = a.find((x)=>{
+//     if(x.age > 30){
+//         return x
+//     }
+// })
+// console.log(dt)
+
+// let i = a.findIndex((x)=>{
+//     if(x.age > 100){
+//         return x
+//     }
+// })
+
+// console.log(i)
+
+// a.reduce()
+// a.some()
+// a.every()
+
+
+
+let items = [
+    {
+        id: 1,
+        itemName: "Laptop",
+        category: "Electronics",
+        price: 850,
+        inStock: true
+    },
+    { id: 2, itemName: "Smartphone", category: "Electronics", price: 500, inStock: true },
+    { id: 3, itemName: "Desk Chair", category: "Furniture", price: 120, inStock: false },
+    { id: 4, itemName: "Wrist Watch", category: "Accessories", price: 75, inStock: true },
+    { id: 5, itemName: "Backpack", category: "Bags", price: 45, inStock: true },
+    { id: 6, itemName: "Bluetooth Speaker", category: "Electronics", price: 60, inStock: true },
+    { id: 7, itemName: "Running Shoes", category: "Footwear", price: 95, inStock: false },
+    { id: 8, itemName: "Notebook", category: "Stationery", price: 5, inStock: true },
+    { id: 9, itemName: "Coffee Mug", category: "Kitchen", price: 12, inStock: true },
+    { id: 10, itemName: "Table Lamp", category: "Furniture", price: 40, inStock: false }
+];
+
+
+let invoices = [
+    {
+        invoiceId: 101,
+        itemId: 1,
+        // itemPrice:---
+        quantity: 2,
+        totalPrice: 1700,
+        date: "2025-09-01"
+    },
+    { invoiceId: 102, itemId: 3, quantity: 1, totalPrice: 120, date: "2025-09-02" },
+    { invoiceId: 103, itemId: 5, quantity: 4, totalPrice: 180, date: "2025-09-02" },
+    { invoiceId: 104, itemId: 2, quantity: 1, totalPrice: 500, date: "2025-09-03" },
+    { invoiceId: 105, itemId: 7, quantity: 2, totalPrice: 190, date: "2025-09-03" },
+    { invoiceId: 106, itemId: 4, quantity: 3, totalPrice: 225, date: "2025-09-04" },
+    { invoiceId: 107, itemId: 8, quantity: 10, totalPrice: 50, date: "2025-09-04" },
+    { invoiceId: 108, itemId: 9, quantity: 6, totalPrice: 72, date: "2025-09-05" },
+    { invoiceId: 109, itemId: 10, quantity: 2, totalPrice: 80, date: "2025-09-05" },
+    { invoiceId: 110, itemId: 6, quantity: 1, totalPrice: 60, date: "2025-09-06" },
+    { invoiceId: 111, itemId: 2, quantity: 2, totalPrice: 1000, date: "2025-09-06" },
+    { invoiceId: 112, itemId: 5, quantity: 1, totalPrice: 45, date: "2025-09-07" },
+    { invoiceId: 113, itemId: 1, quantity: 3, totalPrice: 2550, date: "2025-09-07" },
+    { invoiceId: 114, itemId: 9, quantity: 8, totalPrice: 96, date: "2025-09-08" },
+    { invoiceId: 115, itemId: 7, quantity: 1, totalPrice: 95, date: "2025-09-08" },
+    { invoiceId: 116, itemId: 6, quantity: 4, totalPrice: 240, date: "2025-09-09" },
+    { invoiceId: 117, itemId: 8, quantity: 15, totalPrice: 75, date: "2025-09-09" },
+    { invoiceId: 118, itemId: 10, quantity: 3, totalPrice: 120, date: "2025-09-10" },
+    { invoiceId: 119, itemId: 4, quantity: 2, totalPrice: 150, date: "2025-09-10" },
+    { invoiceId: 120, itemId: 3, quantity: 5, totalPrice: 600, date: "2025-09-11" }
+];
