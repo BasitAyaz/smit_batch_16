@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-gradient-to-br from-blue-200 to-purple-300 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white shadow-lg rounded-lg max-w-md w-full p-8">
+        <!-- Toggle Buttons -->
+        <div class="flex justify-center mb-6">
+            <button id="signupTab"
+                class="tab-btn text-gray-500 font-semibold px-4 border-b-2 border-blue-600 py-2">Signup</button>
+        </div>
+
+
+        <!-- Signup Form -->
+        <div class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Name</label>
+                <input id="userName" type="text"
+                    class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    required />
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <input id="email" type="email"
+                    class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    required />
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Password</label>
+                <input id="password" type="password"
+                    class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    required />
+            </div>
+            <button onclick="signUp()" type="submit"
+                class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-300">
+                Signup
+            </button>
+        </div>
+    </div>
+
+
+    <script src="app.js" type="module"></script>
+
+</body>
+
+</html>

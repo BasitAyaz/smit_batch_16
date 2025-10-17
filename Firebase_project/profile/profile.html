@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - Profiler</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center text-indigo-600">Edit Social Media Links</h1>
+
+    <form class="space-y-4">
+      <!-- Facebook -->
+      <div>
+        <label for="facebook" class="block text-gray-700 font-medium mb-1">Facebook</label>
+        <input
+          type="url"
+          id="facebook"
+          name="facebook"
+          placeholder="https://facebook.com/yourprofile"
+          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+      </div>
+
+      <!-- Twitter -->
+      <div>
+        <label for="twitter" class="block text-gray-700 font-medium mb-1">Twitter</label>
+        <input
+          type="url"
+          id="twitter"
+          name="twitter"
+          placeholder="https://twitter.com/yourhandle"
+          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      <!-- LinkedIn -->
+      <div>
+        <label for="linkedin" class="block text-gray-700 font-medium mb-1">LinkedIn</label>
+        <input
+          type="url"
+          id="linkedin"
+          name="linkedin"
+          placeholder="https://linkedin.com/in/yourprofile"
+          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700"
+        />
+      </div>
+
+      <!-- Instagram -->
+      <div>
+        <label for="instagram" class="block text-gray-700 font-medium mb-1">Instagram</label>
+        <input
+          type="url"
+          id="instagram"
+          name="instagram"
+          placeholder="https://instagram.com/yourhandle"
+          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+        />
+      </div>
+
+      <!-- Save Button -->
+      <div class="pt-4">
+        <button
+        onclick="save()"
+          type="submit"
+          class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition"
+        >
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

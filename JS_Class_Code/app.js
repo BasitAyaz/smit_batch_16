@@ -1350,56 +1350,67 @@ while (i < 10){
 //     console.log(obj[a])
 // }
 
-let a = [
-    { id: 1, firstName: "Muhammad", lastName: "Ahmed", age: 63 },
-    { id: 2, firstName: "Ali", lastName: "Khan", age: 28 },
-    { id: 3, firstName: "Ayesha", lastName: "Malik", age: 34 },
-    { id: 4, firstName: "Hassan", lastName: "Raza", age: 41 },
-    { id: 5, firstName: "Fatima", lastName: "Sheikh", age: 22 },
-    { id: 6, firstName: "Usman", lastName: "Javed", age: 37 },
-    { id: 7, firstName: "Sara", lastName: "Nawaz", age: 30 },
-    { id: 8, firstName: "Bilal", lastName: "Chaudhry", age: 45 },
-    { id: 9, firstName: "Zainab", lastName: "Iqbal", age: 27 },
-    { id: 10, firstName: "Imran", lastName: "Shah", age: 52 },
-    { id: 11, firstName: "Noor", lastName: "Fatima", age: 19 },
-    { id: 12, firstName: "Hamza", lastName: "Butt", age: 36 },
-    { id: 13, firstName: "Sana", lastName: "Khalid", age: 24 },
-    { id: 14, firstName: "Danish", lastName: "Tariq", age: 39 },
-    { id: 15, firstName: "Hina", lastName: "Qureshi", age: 29 },
-    { id: 16, firstName: "Kashif", lastName: "Saleem", age: 47 },
-    { id: 17, firstName: "Mariam", lastName: "Hassan", age: 32 },
-    { id: 18, firstName: "Shahzaib", lastName: "Farooq", age: 26 },
-    { id: 19, firstName: "Rabia", lastName: "Ansari", age: 38 },
-    { id: 20, firstName: "Tahir", lastName: "Latif", age: 55 }
-];
+// let a = [
+//     { 
+//         id: 1, 
+//         firstName: "Muhammad", 
+//         lastName: "Ahmed", 
+//         age: 63, 
+//         isSelected: false, 
+//         salary: 95000, 
+//         category: "High" 
+//     },
+//     { id: 2, firstName: "Ali", lastName: "Khan", age: 28, isSelected: false, salary: 60000, category: "Medium" },
+//     { id: 3, firstName: "Ayesha", lastName: "Malik", age: 34, isSelected: false, salary: 72000, category: "Medium" },
+//     { id: 4, firstName: "Hassan", lastName: "Raza", age: 41, isSelected: false, salary: 85000, category: "Medium" },
+//     { id: 5, firstName: "Fatima", lastName: "Sheikh", age: 22, isSelected: false, salary: 40000, category: "Low" },
+//     { id: 6, firstName: "Usman", lastName: "Javed", age: 37, isSelected: false, salary: 78000, category: "Medium" },
+//     { id: 7, firstName: "Sara", lastName: "Nawaz", age: 30, isSelected: false, salary: 65000, category: "Medium" },
+//     { id: 8, firstName: "Bilal", lastName: "Chaudhry", age: 45, isSelected: false, salary: 100000, category: "High" },
+//     { id: 9, firstName: "Zainab", lastName: "Iqbal", age: 27, isSelected: false, salary: 55000, category: "Low" },
+//     { id: 10, firstName: "Imran", lastName: "Shah", age: 52, isSelected: false, salary: 110000, category: "High" },
+//     { id: 11, firstName: "Noor", lastName: "Fatima", age: 19, isSelected: false, salary: 30000, category: "Low" },
+//     { id: 12, firstName: "Hamza", lastName: "Butt", age: 36, isSelected: false, salary: 72000, category: "Medium" },
+//     { id: 13, firstName: "Sana", lastName: "Khalid", age: 24, isSelected: false, salary: 48000, category: "Low" },
+//     { id: 14, firstName: "Danish", lastName: "Tariq", age: 39, isSelected: false, salary: 82000, category: "Medium" },
+//     { id: 15, firstName: "Hina", lastName: "Qureshi", age: 29, isSelected: false, salary: 61000, category: "Medium" },
+//     { id: 16, firstName: "Kashif", lastName: "Saleem", age: 47, isSelected: false, salary: 97000, category: "High" },
+//     { id: 17, firstName: "Mariam", lastName: "Hassan", age: 32, isSelected: false, salary: 70000, category: "Medium" },
+//     { id: 18, firstName: "Shahzaib", lastName: "Farooq", age: 26, isSelected: false, salary: 58000, category: "Low" },
+//     { id: 19, firstName: "Rabia", lastName: "Ansari", age: 38, isSelected: false, salary: 76000, category: "Medium" },
+//     { id: 20, firstName: "Tahir", lastName: "Latif", age: 55, isSelected: true, salary: 115000, category: "High" }
+// ];
 
-// a.forEach((x)=>{
+
+
+
+// a.forEach((x,i,list)=>{
 //     console.log(x)
 //     x.section = "A"
 // })
 
-// let ids = a.map((x)=>{
+// let ids = a.map((x,i,list)=>{
 //     if(x.age > 30){
 //         return x.id
 //     }
 // })
 // console.log(ids)
 
-// let dt = a.filter((x) => {
+// let dt = a.filter((x,i,list) => {
 //     if (x.age > 30) {
 //         return x.id
 //     }
 // })
 // console.log(dt)
 
-// let dt = a.find((x)=>{
+// let dt = a.find((x,i,list)=>{
 //     if(x.age > 30){
 //         return x
 //     }
 // })
 // console.log(dt)
 
-// let i = a.findIndex((x)=>{
+// let i = a.findIndex((x,i,list)=>{
 //     if(x.age > 100){
 //         return x
 //     }
@@ -1407,58 +1418,415 @@ let a = [
 
 // console.log(i)
 
-// a.reduce()
-// a.some()
-// a.every()
+// let check = a.some((x,i,list)=>{
+//     if(x.isSelected){
+//         return x
+//     }
+// })
+// console.log(check)
+
+// let check = a.every((x,i,list)=>{
+//     if(!x.isSelected){
+//         return x
+//     }
+// })
+// console.log(check)
+
+// let amount = 0
+// a.forEach(x => {
+//     amount += x.salary
+// })
+
+// console.log(amount)
+
+// let val = a.reduce((a, b, i) => {
+//     console.log(i, "<===== Index =======")
+//     console.log(a, "<===== A")
+//     console.log(b.salary, "return wali value")
+//     return a + b.salary
+// }, 0)
+
+// console.log(val)
+
+// {
+//     high:[],
+//     low:[],
+//     medium:[]
+// }
+
+
+// console.log(a)
+// let groupedData = a.reduce((x,y)=>{    
+//     if(x[y.category]){
+//         // {high:[]}
+//         x[y.category].push(y)
+//     }else {
+//         // {}
+//         x[y.category] = [y]
+//     }
+//     return x
+// },{})
+// console.log(groupedData)
+
+
+// let agewiseData = a.reduce((x,obj)=>{
+//     if(obj.age < 18){
+//         if(x.underAge){
+//             x.underAge.push(obj)
+//         }else{
+//             x.underAge = [obj]
+//         }
+//     }else if(obj.age >= 18 && obj.age <= 50){
+//         if(x.eligable){
+//             x.eligable.push(obj)
+//         }else{
+//             x.eligable = [obj]
+//         }
+//     }else {        
+//         if(x.aboveAge){
+//             x.aboveAge.push(obj)
+//         }else{
+//             x.aboveAge = [obj]
+//         }
+//     }
+
+//     return x
+// },{})
+
+// console.log(agewiseData)
+
+// {
+//     underAge:[],
+//     eligable:[],
+//     aboveAge:[]
+// }
+
+// let items = [
+//     {
+//         id: 1,
+//         itemName: "Laptop",
+//         category: "Electronics",
+//         price: 850,
+//         inStock: true
+//     },
+//     { id: 2, itemName: "Smartphone", category: "Electronics", price: 500, inStock: true },
+//     { id: 3, itemName: "Desk Chair", category: "Furniture", price: 120, inStock: false },
+//     { id: 4, itemName: "Wrist Watch", category: "Accessories", price: 75, inStock: true },
+//     { id: 5, itemName: "Backpack", category: "Bags", price: 45, inStock: true },
+//     { id: 6, itemName: "Bluetooth Speaker", category: "Electronics", price: 60, inStock: true },
+//     { id: 7, itemName: "Running Shoes", category: "Footwear", price: 95, inStock: false },
+//     { id: 8, itemName: "Notebook", category: "Stationery", price: 5, inStock: true },
+//     { id: 9, itemName: "Coffee Mug", category: "Kitchen", price: 12, inStock: true },
+//     { id: 10, itemName: "Table Lamp", category: "Furniture", price: 40, inStock: false }
+// ];
+
+// let invoices = [
+//     {
+//         invoiceId: 101,
+//         itemId: 1,
+//         // itemPrice:---
+//         quantity: 2,
+//         totalPrice: 1700,
+//         date: "2025-09-01"
+//     },
+//     { invoiceId: 102, itemId: 3, quantity: 1, totalPrice: 120, date: "2025-09-02" },
+//     { invoiceId: 103, itemId: 5, quantity: 4, totalPrice: 180, date: "2025-09-02" },
+//     { invoiceId: 104, itemId: 2, quantity: 1, totalPrice: 500, date: "2025-09-03" },
+//     { invoiceId: 105, itemId: 7, quantity: 2, totalPrice: 190, date: "2025-09-03" },
+//     { invoiceId: 106, itemId: 4, quantity: 3, totalPrice: 225, date: "2025-09-04" },
+//     { invoiceId: 107, itemId: 8, quantity: 10, totalPrice: 50, date: "2025-09-04" },
+//     { invoiceId: 108, itemId: 9, quantity: 6, totalPrice: 72, date: "2025-09-05" },
+//     { invoiceId: 109, itemId: 10, quantity: 2, totalPrice: 80, date: "2025-09-05" },
+//     { invoiceId: 110, itemId: 6, quantity: 1, totalPrice: 60, date: "2025-09-06" },
+//     { invoiceId: 111, itemId: 2, quantity: 2, totalPrice: 1000, date: "2025-09-06" },
+//     { invoiceId: 112, itemId: 5, quantity: 1, totalPrice: 45, date: "2025-09-07" },
+//     { invoiceId: 113, itemId: 1, quantity: 3, totalPrice: 2550, date: "2025-09-07" },
+//     { invoiceId: 114, itemId: 9, quantity: 8, totalPrice: 96, date: "2025-09-08" },
+//     { invoiceId: 115, itemId: 7, quantity: 1, totalPrice: 95, date: "2025-09-08" },
+//     { invoiceId: 116, itemId: 6, quantity: 4, totalPrice: 240, date: "2025-09-09" },
+//     { invoiceId: 117, itemId: 8, quantity: 15, totalPrice: 75, date: "2025-09-09" },
+//     { invoiceId: 118, itemId: 10, quantity: 3, totalPrice: 120, date: "2025-09-10" },
+//     { invoiceId: 119, itemId: 4, quantity: 2, totalPrice: 150, date: "2025-09-10" },
+//     { invoiceId: 120, itemId: 3, quantity: 5, totalPrice: 600, date: "2025-09-11" }
+// ];
+
+// invoices.forEach((x)=>{
+//     let singleProduct = items.find((y)=> {
+//         if(y.id === x.itemId){
+//             return y
+//         }
+//     })
+//     x.itemPrice = singleProduct.price
+// })
+
+
+// console.log(invoices)
+
+
+// console.log("1")
+// setTimeout(()=>{
+//     console.log("2")
+// },1000)
+// console.log("3")
 
 
 
-let items = [
-    {
-        id: 1,
-        itemName: "Laptop",
-        category: "Electronics",
-        price: 850,
-        inStock: true
-    },
-    { id: 2, itemName: "Smartphone", category: "Electronics", price: 500, inStock: true },
-    { id: 3, itemName: "Desk Chair", category: "Furniture", price: 120, inStock: false },
-    { id: 4, itemName: "Wrist Watch", category: "Accessories", price: 75, inStock: true },
-    { id: 5, itemName: "Backpack", category: "Bags", price: 45, inStock: true },
-    { id: 6, itemName: "Bluetooth Speaker", category: "Electronics", price: 60, inStock: true },
-    { id: 7, itemName: "Running Shoes", category: "Footwear", price: 95, inStock: false },
-    { id: 8, itemName: "Notebook", category: "Stationery", price: 5, inStock: true },
-    { id: 9, itemName: "Coffee Mug", category: "Kitchen", price: 12, inStock: true },
-    { id: 10, itemName: "Table Lamp", category: "Furniture", price: 40, inStock: false }
-];
+// line 3 
+// let getData = () => {
+//     return new Promise((resolve,reject)=>{
+//         let a;
+//         setTimeout(() => {
+//             a = [
+//                 {
+//                     invoiceId: 101,
+//                     itemId: 1,
+//                     // itemPrice:---
+//                     quantity: 2,
+//                     totalPrice: 1700,
+//                     date: "2025-09-01"
+//                 },
+//                 { invoiceId: 102, itemId: 3, quantity: 1, totalPrice: 120, date: "2025-09-02" },
+//                 { invoiceId: 103, itemId: 5, quantity: 4, totalPrice: 180, date: "2025-09-02" },
+//                 { invoiceId: 104, itemId: 2, quantity: 1, totalPrice: 500, date: "2025-09-03" },
+//                 { invoiceId: 105, itemId: 7, quantity: 2, totalPrice: 190, date: "2025-09-03" },
+//                 { invoiceId: 106, itemId: 4, quantity: 3, totalPrice: 225, date: "2025-09-04" },
+//                 { invoiceId: 107, itemId: 8, quantity: 10, totalPrice: 50, date: "2025-09-04" },
+//                 { invoiceId: 108, itemId: 9, quantity: 6, totalPrice: 72, date: "2025-09-05" },
+//                 { invoiceId: 109, itemId: 10, quantity: 2, totalPrice: 80, date: "2025-09-05" },
+//                 { invoiceId: 110, itemId: 6, quantity: 1, totalPrice: 60, date: "2025-09-06" },
+//                 { invoiceId: 111, itemId: 2, quantity: 2, totalPrice: 1000, date: "2025-09-06" },
+//                 { invoiceId: 112, itemId: 5, quantity: 1, totalPrice: 45, date: "2025-09-07" },
+//                 { invoiceId: 113, itemId: 1, quantity: 3, totalPrice: 2550, date: "2025-09-07" },
+//                 { invoiceId: 114, itemId: 9, quantity: 8, totalPrice: 96, date: "2025-09-08" },
+//                 { invoiceId: 115, itemId: 7, quantity: 1, totalPrice: 95, date: "2025-09-08" },
+//                 { invoiceId: 116, itemId: 6, quantity: 4, totalPrice: 240, date: "2025-09-09" },
+//                 { invoiceId: 117, itemId: 8, quantity: 15, totalPrice: 75, date: "2025-09-09" },
+//                 { invoiceId: 118, itemId: 10, quantity: 3, totalPrice: 120, date: "2025-09-10" },
+//                 { invoiceId: 119, itemId: 4, quantity: 2, totalPrice: 150, date: "2025-09-10" },
+//                 { invoiceId: 120, itemId: 3, quantity: 5, totalPrice: 600, date: "2025-09-11" }
+//             ];
+
+//             if(a.length){
+//                 resolve(a)
+//             }else{
+//                 reject("Data Not Found")
+//             }
+//         }, 2000)
 
 
-let invoices = [
-    {
-        invoiceId: 101,
-        itemId: 1,
-        // itemPrice:---
-        quantity: 2,
-        totalPrice: 1700,
-        date: "2025-09-01"
-    },
-    { invoiceId: 102, itemId: 3, quantity: 1, totalPrice: 120, date: "2025-09-02" },
-    { invoiceId: 103, itemId: 5, quantity: 4, totalPrice: 180, date: "2025-09-02" },
-    { invoiceId: 104, itemId: 2, quantity: 1, totalPrice: 500, date: "2025-09-03" },
-    { invoiceId: 105, itemId: 7, quantity: 2, totalPrice: 190, date: "2025-09-03" },
-    { invoiceId: 106, itemId: 4, quantity: 3, totalPrice: 225, date: "2025-09-04" },
-    { invoiceId: 107, itemId: 8, quantity: 10, totalPrice: 50, date: "2025-09-04" },
-    { invoiceId: 108, itemId: 9, quantity: 6, totalPrice: 72, date: "2025-09-05" },
-    { invoiceId: 109, itemId: 10, quantity: 2, totalPrice: 80, date: "2025-09-05" },
-    { invoiceId: 110, itemId: 6, quantity: 1, totalPrice: 60, date: "2025-09-06" },
-    { invoiceId: 111, itemId: 2, quantity: 2, totalPrice: 1000, date: "2025-09-06" },
-    { invoiceId: 112, itemId: 5, quantity: 1, totalPrice: 45, date: "2025-09-07" },
-    { invoiceId: 113, itemId: 1, quantity: 3, totalPrice: 2550, date: "2025-09-07" },
-    { invoiceId: 114, itemId: 9, quantity: 8, totalPrice: 96, date: "2025-09-08" },
-    { invoiceId: 115, itemId: 7, quantity: 1, totalPrice: 95, date: "2025-09-08" },
-    { invoiceId: 116, itemId: 6, quantity: 4, totalPrice: 240, date: "2025-09-09" },
-    { invoiceId: 117, itemId: 8, quantity: 15, totalPrice: 75, date: "2025-09-09" },
-    { invoiceId: 118, itemId: 10, quantity: 3, totalPrice: 120, date: "2025-09-10" },
-    { invoiceId: 119, itemId: 4, quantity: 2, totalPrice: 150, date: "2025-09-10" },
-    { invoiceId: 120, itemId: 3, quantity: 5, totalPrice: 600, date: "2025-09-11" }
-];
+//     })
+// }
+
+
+// let dataTable = document.getElementById("dataTable")
+
+// let renderData = async ()=>{
+//     console.log("Start")
+//     let a = await getData()
+//     console.log(a)
+//     a.map((x)=>{
+//         dataTable.innerHTML += `<tr>
+//         <td>${x.invoiceId}</td>
+//         <td>${x.itemId}</td>
+//         <td>${x.totalPrice}</td>
+//         </tr>`
+//     })
+//     console.log("End")
+// }
+// renderData()
+
+// let inp = document.getElementById("inp")
+// let rad = document.getElementsByName("Gender")
+// let dropdown = document.getElementById("dropdown")
+
+// let checkValue = ()=>{    
+//    let reges = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//     if(inp.value.match(reges)){
+//         console.log("Correct")
+//     }else{
+//         inp.style.borderColor = "red"
+//         console.log("InCorrect")
+//     }
+// }
+
+// let a = 20
+
+// let abc = ()=>{
+//     let a = 10
+//     console.log(a)
+// }
+
+// abc()
+
+// let a = []
+// let b = a
+
+// b.push("ABC")
+// console.log(a)
+
+// let a  = [1,2,3,4,5,6]
+// let b = [...a]
+
+// b.push("ABC")
+
+// console.log(b)
+// console.log(a)
+
+
+// let a = {
+//     id:1,
+//     name:"ABC"
+// }
+// let b = {...a}
+
+// b.age = 18
+
+// spread operator
+// rest operator
+
+// let a = (a,b,c,d,e,f)=>{
+//     console.log(a,b,c,d,e,f)
+// }
+// let a = (p,i,...rest)=>{
+//     console.log(rest)
+//     console.log(p)
+//     console.log(i)
+// }
+// a(1,2,3,4,5,6,7,8,9,4,5,3,1,5,4,5,6,6)
+
+
+// let a = [1,2,3,4,5,6,7,8,9,4,5,3,1,5,4,5,6,6]
+
+// let mx = Math.max(...a)
+// console.log(mx)
+
+// let abc = (a = 0)=>{    
+//     return (a + 30) - 20
+// }
+
+// let b = abc()
+// console.log(b)
+
+// ========== Destructuring ===========
+
+// let obj = {
+//     id:1,
+//     name:'ABC',
+//     age:18
+// }
+
+// // const id = obj.id
+// let {name,id,age} = obj
+
+// console.log(name)
+
+
+// let arr = ["A", "B", "C", "D"]
+
+// let [,,nm1] = arr
+
+// console.log(nm1)
+
+
+// const counter = (count)=>{
+//     return {
+//         increment:()=>{
+//             let a = ++count
+//             return a
+//         },
+//         decrement:()=>{
+//             let a = --count
+//             return a
+//         },
+//     }
+// }
+
+
+// let {increment,decrement} = counter(20)
+
+// let b = counter(10)
+// let {increment,decrement} = b
+
+// console.log(increment())
+// console.log(decrement())
+
+
+// let abc = (msg) => {
+//     console.log(msg)
+// }
+
+// let xyz = (m) => {
+//     return m
+// }
+
+
+// abc(xyz("Some Text Message"))
+
+// let abc = ()=>{
+//     console.log("Outer Function")
+//     return ()=>{
+//         console.log("Inside Function")
+//     }
+// }
+
+// abc()()
+
+// let obj = {
+//     id:1,
+//     name:"ABC",    
+// }
+
+// obj.experience = [
+//     {
+//         title:"Front End Developer",
+//         rating:4
+//     },
+//     {
+//         title:"Front End Developer",
+//         rating:3
+//     },
+//     "Backend Developer"
+// ]
+
+// let av = 0;
+// let sum = 0;
+// obj.experience.forEach(x => {
+// sum += x?.rating ? x.rating : 0
+// sum += x?.rating ?? 0
+// sum += x?.rating || 0
+// });
+// av = sum / 5
+
+// console.log(av)
+
+
+
+// let arr = [
+//     {
+//         id: 1,
+//         name: "ABC",
+//         age: 12
+//     }
+// ]
+
+// for (const s of arr) {
+//     console.log(s)
+// }
+
+// let m = new Map()
+// m.set("id",1)
+// m.set("name","ABC")
+// m.set("age",20)
+// m.set("obj",{
+//     mid:12312,
+//     ab:"asd asd asd"
+// })
+
+
+// let age = m.get("obj")
+// console.log(age)
+
+// console.log(m)
+// console.log(typeof m)
+
+
