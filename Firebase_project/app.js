@@ -4,6 +4,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase
 
 import { getAuth, onAuthStateChanged,signOut  } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 
+import {getDatabase,ref,get} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js"
 
 
 
@@ -12,20 +13,31 @@ import { getAuth, onAuthStateChanged,signOut  } from "https://www.gstatic.com/fi
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
- 
-};
+const firebaseConfig = {};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth()
+const db = getDatabase()
 
 const loginLink = document.getElementById("loginLink")
 const profileLink = document.getElementById("profileLink")
 const signUpLink = document.getElementById("signUpLink")
 const logoutBtn = document.getElementById("logoutBtn")
+let uid;
 
+let getData = ()=>{
+  const path = ref(db,`links/${uid}`)
+  get(path)
+  .then((res)=>{
+    let data = res.val()
+    console.log(data)
+    
+  }).catch((err)=>{
+
+  })
+}
 
 let init = () => {
   onAuthStateChanged(auth, (user) => {
@@ -33,7 +45,8 @@ let init = () => {
       console.log(user)
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/auth.user
-      const uid = user.uid;
+      uid = user.uid;
+      getData()
       loginLink.style.display = "none"
       signUpLink.style.display = "none"
       profileLink.style.display = "inline-block"
