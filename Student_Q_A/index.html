@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-xl font-semibold flex items-center gap-2">
+      <i class="fa-solid fa-user-graduate"></i> Student Dashboard
+    </h1>
+    <span id="userName"></span>
+    <button onclick="logout()" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-100"> Logout
+    </button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-1 container mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+      <i class="fa-solid fa-list"></i> All Questions
+    </h2>
+
+    <div id="questionList" class="space-y-4">
+      <!-- Questions will appear here -->
+    </div>
+  </main>
+
+  <!-- Ask Question Modal -->
+  <div id="questionModal" class="flex justify-center">
+    <div class="bg-white w-11/12 md:w-1/2 rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-semibold mb-4"><i class="fa-solid fa-pen-to-square"></i> Ask a Question</h3>
+      <textarea id="questionInput" rows="4" class="w-full border rounded-md p-2 focus:ring focus:ring-blue-300" placeholder="Type your question..."></textarea>
+      <div class="mt-4 flex justify-end gap-2">
+      
+        <button onclick="askQuestion()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

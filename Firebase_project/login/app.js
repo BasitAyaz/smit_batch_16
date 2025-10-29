@@ -12,7 +12,16 @@ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } fr
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {};
+const firebaseConfig = {
+    apiKey: "AIzaSyDgu7eaKF_7w3UR-9I6irYC4mm73nwXs2U",
+    authDomain: "batch-16-practice.firebaseapp.com",
+    databaseURL: "https://batch-16-practice-default-rtdb.firebaseio.com",
+    projectId: "batch-16-practice",
+    storageBucket: "batch-16-practice.firebasestorage.app",
+    messagingSenderId: "7126675689",
+    appId: "1:7126675689:web:1170519b0f986259ab4078",
+    measurementId: "G-HLYDK5XNW4"
+  };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
